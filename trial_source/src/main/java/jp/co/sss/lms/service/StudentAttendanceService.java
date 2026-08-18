@@ -80,7 +80,7 @@ public class StudentAttendanceService {
 	 * 
 	 * @return 過去に未入力があるならtrue、ないならfalse
 	 */
-	public Boolean isPastNotEnterExists() {
+	public Boolean notEnterCheck() throws ParseException {
 		//現在の日付を取得
 		Date trainingDate = attendanceUtil.getTrainingDate();
 		
