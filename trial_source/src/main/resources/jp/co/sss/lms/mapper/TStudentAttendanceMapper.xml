@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jp.co.sss.lms.mapper.TStudentAttendanceMapper">
-
+	
 	<select id="findByLmsUserId"
 		resultType="jp.co.sss.lms.entity.TStudentAttendance">
 		SELECT *
@@ -103,7 +103,8 @@
 		blank_time = #{blankTime}
 		WHERE student_attendance_id = #{studentAttendanceId}
 	</update>
-
+	
+	<!-- FujiwaraKanta-Task.25 -->>
 	<select id="notEnterCount" resultType="java.lang.Integer">
 		SELECT COUNT(*)
 		FROM

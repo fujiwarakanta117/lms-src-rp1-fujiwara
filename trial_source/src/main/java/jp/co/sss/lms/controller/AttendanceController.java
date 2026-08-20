@@ -45,7 +45,7 @@ public class AttendanceController {
 	@RequestMapping(path = "/detail", method = RequestMethod.GET)
 	public String index(Model model) throws ParseException {
 		
-		//過去の勤怠未入力チェック（受講生のみ）
+		//FujiwaraKanta Task.25 過去の勤怠未入力チェック（受講生のみ）
 		if (loginUserUtil.isStudent()) {
 			Boolean notEnterFlg = studentAttendanceService.notEnterCheck();
 			model.addAttribute("notEnterFlg", notEnterFlg);

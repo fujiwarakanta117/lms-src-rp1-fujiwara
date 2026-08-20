@@ -73,12 +73,11 @@ public class StudentAttendanceService {
 		return attendanceManagementDtoList;
 	}
 
-	
-	
 	/**
-	 * 過去の勤怠に未入力があるかチェック
+	 * @author FujiwaraKanta Task.25
 	 * 
-	 * @return 過去に未入力があるならtrue、ないならfalse
+	 * @return 未入力あり: true／なし: false
+	 * @throws ParseException
 	 */
 	public Boolean notEnterCheck() throws ParseException {
 		//現在の日付を取得
